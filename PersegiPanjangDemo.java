@@ -3,20 +3,22 @@ public class PersegiPanjangDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         PersegiPanjang[] arrayOfPersegiPanjang = new PersegiPanjang[3];
+        int panjang, lebar;
 
         for (int i = 0; i < 3; i++) {
-            arrayOfPersegiPanjang[i] = new PersegiPanjang();
+            // arrayOfPersegiPanjang[i] = new PersegiPanjang();
 
             System.out.println("Persegi Panjang ke-" + (i+1));
             System.out.print("Masukkan panjang: ");
-            arrayOfPersegiPanjang[i].panjang = sc.nextInt();
+            panjang = sc.nextInt();
             System.out.print("Masukkan lebar: ");
-            arrayOfPersegiPanjang[i].lebar = sc.nextInt();
+            lebar = sc.nextInt();
+
+            arrayOfPersegiPanjang[i] = new PersegiPanjang(panjang, lebar);
         }
 
         for (int i = 0; i < 3; i++) {
-            System.out.println("Persegi Panjang ke-" + (i+1) + ", panjang: " 
-            + arrayOfPersegiPanjang[i].panjang + ", lebar: " + arrayOfPersegiPanjang[i].lebar);
+            arrayOfPersegiPanjang[i].cetakInfo();
         } 
 
         // arrayOfPersegiPanjang[0] = new PersegiPanjang();
